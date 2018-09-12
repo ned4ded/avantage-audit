@@ -8,9 +8,14 @@
   box-sizing: border-box;
   width: 350px;
   min-height: 140px;
-  padding: 25px 35px;
+  padding: 25px 20px;
 
   background-color: #f6f6f6;
+
+  &--align--left {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 
   &__name {
     text-align: center;
@@ -27,6 +32,10 @@
     }
   }
 
+  &--align--left &__name {
+    text-align: left;
+  }
+
   &__descr {
     text-align: center;
 
@@ -35,5 +44,10 @@
     line-height: 24px;
 
     @include make-ff-nova(18px);
+  }
+
+
+  &--align--left &__descr {
+    text-align: left;
   }
 }

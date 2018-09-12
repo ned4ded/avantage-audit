@@ -1,0 +1,210 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 page-services__block">
+        <div class="page-services__cards">
+          {{ serviceCard.make(['Аудит и ', 'оценка ', 'бизнеса'], 'service-card--audit') }}
+
+          {{ serviceCard.make(['Стратегический и ', 'управленческий ', 'консалтинг'], 'service-card--strategy') }}
+
+          {{ serviceCard.make(['Налоговое и ', 'юридическое ', 'сопровождение'], 'service-card--taxes') }}
+
+          {{ serviceCard.make(['Другие ', 'услуги ', ''], 'service-card--other') }}
+        </div>
+
+        <p class="paragraph page-services__paragraph page-services__cards-paragraph">
+          Мы помогаем клиентам искать новые возможности для развития, улучшать показатели деятельности, управлять рисками и повышать стоимость бизнеса.
+        </p>
+      </div>
+
+      <div class="col-12 page-services__block">
+        {{heading.make(false, 'Аудит и оценка бизнеса', 'page-services__heading')}}
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Независимый аудит является основой принятия стратегических решений.
+        </p>
+        <p class="paragraph page-services__paragraph">
+          Мы проводим конструктивные и тщательные аудиторские проверки, Качество - это фундамент нашего аудита.
+        </p>
+
+        <ul class="page-services__list">
+          <li class="card card--align--left">
+            <span class="card__name">Аудит</span>
+            <span class="card__descr">Оказание аудиторских услуг, включая аудиторские проверки и сопровождение</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Оценка</span>
+            <span class="card__descr">Оказание услуг, в сфере оценки бизнеса</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">МСФО</span>
+            <span class="card__descr">Оказание услуг в области МСФО</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 page-services__block">
+        {{heading.make(false, 'Стратегический и управленческий консалтинг', 'page-services__heading')}}
+
+        <p class="paragraph page-services__paragraph">
+          Мы разрабатываем предложения услуг для каждого конкретного случая, что помогает клиентам решать текущие вопросы и рассчитывать на успех и рост бизнеса в долгосрочной перспективе.
+        </p>
+
+        <ul class="page-services__list">
+          <li class="card card--align--left">
+            <span class="card__name">Управленческий учет</span>
+            <span class="card__descr">Услуги по постановке и автоматизации оперативного управленческого учета</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Операционный консалтинг</span>
+            <span class="card__descr">Услуги по снижению себестоимости, внедрению систем учета, контроля и планирования</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">HR консалтинг</span>
+            <span class="card__descr">Оказание услуг кадрового консалтинга</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Внутренний Консалтинг</span>
+            <span class="card__descr">Услуги по формированию структуры управления, постановке и ведению кадрового учета</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 page-services__block">
+        {{heading.make(false, 'Налоговое и юридическое сопровождение', 'page-services__heading')}}
+
+        <p class="paragraph page-services__paragraph">
+          Мы оказываем полный комплекс консультационных услуг в области международного налогообложения. Мы также предлагаем своим клиентам эффективные и низкозатратные варианты комплексного бухгалтерского и налогового сопровождения.
+        </p>
+
+        <ul class="page-services__list">
+          <li class="card card--align--left">
+            <span class="card__name">Экспертиза тарифов</span>
+            <span class="card__descr">Оказание услуг в области экспертизы тарифов</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Налоговый консалтинг</span>
+            <span class="card__descr">Услуги в области бухгалтерского учета, налогообложения и предпринимательского права</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Юридические услуги</span>
+            <span class="card__descr">Регулирование имущественных и налоговых споров, представительство и защита интересов в Арбитражном суде</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Приватизация</span>
+            <span class="card__descr">Оказание услуг по сопровождению сделок приватизации предприятий</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 page-services__block">
+        {{heading.make(false, 'Другие услуги', 'page-services__heading')}}
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--other">
+          Огромный опыт наших специалистов позволяет оказывать нам различные услуги по оптимизации бизнеса компаинй и организаций.
+        </p>
+
+        <ul class="page-services__list">
+          <li class="card card--align--left">
+            <span class="card__name">Абонентское обслуживание</span>
+            <span class="card__descr">Оказание услуг по абонентскому обслуживанию  предприятий ЖКХ</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Обучение МСФО</span>
+            <span class="card__descr">Оказание услуг по обучению МСФО</span>
+          </li>
+
+          <li class="card card--align--left">
+            <span class="card__name">Подготовка кадров</span>
+            <span class="card__descr">Повышение квалификации для профессиональных бухгалтеров</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid page-services__programs">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              {{heading.make('Целевые', 'программы', 'page-services__programs-heading')}}
+            </div>
+
+            <p class="col-12 paragraph page-services__programs-paragraph">
+              Для основных групп наших клиентов мы разработали целевые программы.
+            </p>
+
+            <div class="col-12">
+              <div class="page-services__accordion">
+                <p class="page-services__accordion-heading">Программа работ для государственных унитарных предприятий</p>
+                <p class="page-services__accordion-content">Placeholder</p>
+              </div>
+
+              <div class="page-services__accordion">
+                <p class="page-services__accordion-heading">Программа работ для акционерных обществ</p>
+                <p class="page-services__accordion-content">Placeholder</p>
+              </div>
+
+              <div class="page-services__accordion">
+                <p class="page-services__accordion-heading">Программа работ для муниципальных образований</p>
+                <p class="page-services__accordion-content">Placeholder</p>
+              </div>
+
+              <div class="page-services__accordion">
+                <p class="page-services__accordion-heading">Программа работ для образовательных учреждений</p>
+                <p class="page-services__accordion-content">Placeholder</p>
+              </div>
+
+              <div class="page-services__accordion">
+                <p class="page-services__accordion-heading">Программа работ для холдинговых структур</p>
+                <p class="page-services__accordion-content">Placeholder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

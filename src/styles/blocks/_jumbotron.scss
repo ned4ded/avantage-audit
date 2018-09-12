@@ -21,6 +21,13 @@
     background-image: url('../assets/imgs/client-jumbotron-bg.jpg');
   }
 
+  &--services {
+    padding-top: 185px;
+    padding-bottom: 75px;
+
+    background-image: url('../assets/imgs/services-jumbotron-bg.jpg');
+  }
+
   &__heading {
     position: relative;
 
@@ -51,6 +58,7 @@
   }
 
   &--about &__heading,
+  &--services &__heading,
   &--clients &__heading {
     padding: 0;
     margin: 0;

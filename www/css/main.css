@@ -207,6 +207,10 @@ body {
     padding-top: 185px;
     padding-bottom: 75px;
     background-image: url("../assets/imgs/client-jumbotron-bg.jpg"); }
+  .jumbotron--services {
+    padding-top: 185px;
+    padding-bottom: 75px;
+    background-image: url("../assets/imgs/services-jumbotron-bg.jpg"); }
   .jumbotron__heading {
     position: relative;
     max-width: 510px;
@@ -229,10 +233,12 @@ body {
       content: '';
       background-color: #fece76; }
   .jumbotron--about .jumbotron__heading,
+  .jumbotron--services .jumbotron__heading,
   .jumbotron--clients .jumbotron__heading {
     padding: 0;
     margin: 0; }
     .jumbotron--about .jumbotron__heading:before,
+    .jumbotron--services .jumbotron__heading:before,
     .jumbotron--clients .jumbotron__heading:before {
       display: none; }
   .jumbotron__btn-container {
@@ -312,8 +318,15 @@ body {
           box-sizing: border-box;
   width: 350px;
   min-height: 140px;
-  padding: 25px 35px;
+  padding: 25px 20px;
   background-color: #f6f6f6; }
+  .card--align--left {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .card__name {
     text-align: center;
     text-transform: uppercase;
@@ -325,6 +338,8 @@ body {
     font-style: normal; }
     .card__name:not(:last-child) {
       margin-bottom: 1px; }
+  .card--align--left .card__name {
+    text-align: left; }
   .card__descr {
     text-align: center;
     color: #252c30;
@@ -333,6 +348,8 @@ body {
     font-size: 18px;
     font-weight: 400;
     font-style: normal; }
+  .card--align--left .card__descr {
+    text-align: left; }
 
 .services {
   padding-top: 80px;
@@ -733,3 +750,105 @@ body {
                 transform: translateY(-50%);
         border-radius: 100%;
         background-color: #232323; }
+
+.page-services__heading {
+  margin-bottom: 20px;
+  text-align: left; }
+  .page-services__heading:before {
+    left: 0;
+    -webkit-transform: none;
+            transform: none; }
+
+.page-services__paragraph {
+  margin-bottom: 55px;
+  margin-top: 0; }
+  .page-services__paragraph--no-margin {
+    margin-bottom: 0; }
+  .page-services__paragraph--other {
+    max-width: 865px; }
+
+.page-services__block {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 45px; }
+  .page-services__block:after {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    display: block;
+    width: calc(100% - 30px);
+    height: 1px;
+    content: '';
+    background-color: #999aa6; }
+
+.page-services__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .page-services__cards-paragraph {
+    max-width: 735px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    text-align: center; }
+
+.page-services__list {
+  padding-left: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .page-services__list li:nth-child(n + 4) {
+    margin-top: 25px; }
+
+.page-services__programs {
+  margin-top: 140px;
+  padding-top: 140px;
+  padding-bottom: 200px;
+  background-color: #f6f6f6; }
+  .page-services__programs-heading {
+    margin-bottom: 25px; }
+  .page-services__programs-paragraph {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 70px; }
+
+.page-services__accordion:not(:last-child) {
+  margin-bottom: 6px; }
+
+.page-services__accordion-heading {
+  position: relative;
+  padding: 18px 30px 16px;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  background-color: #ededed;
+  color: #252c30;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal; }
+  .page-services__accordion-heading:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 31px;
+    right: 30px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 10px;
+    height: 6px;
+    background-image: url("../assets/imgs/icon_arrow.png"); }
+
+.page-services__accordion-content {
+  display: none; }
