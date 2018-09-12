@@ -203,6 +203,10 @@ body {
     padding-top: 185px;
     padding-bottom: 75px;
     background-image: url("../assets/imgs/about-jumbotron-bg.jpg"); }
+  .jumbotron--clients {
+    padding-top: 185px;
+    padding-bottom: 75px;
+    background-image: url("../assets/imgs/client-jumbotron-bg.jpg"); }
   .jumbotron__heading {
     position: relative;
     max-width: 510px;
@@ -224,10 +228,12 @@ body {
       height: 5px;
       content: '';
       background-color: #fece76; }
-  .jumbotron--about .jumbotron__heading {
+  .jumbotron--about .jumbotron__heading,
+  .jumbotron--clients .jumbotron__heading {
     padding: 0;
     margin: 0; }
-    .jumbotron--about .jumbotron__heading:before {
+    .jumbotron--about .jumbotron__heading:before,
+    .jumbotron--clients .jumbotron__heading:before {
       display: none; }
   .jumbotron__btn-container {
     margin: 0; }
@@ -286,6 +292,47 @@ body {
         height: 3px;
         content: '';
         background-color: #fece76; }
+
+.card {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 350px;
+  min-height: 140px;
+  padding: 25px 35px;
+  background-color: #f6f6f6; }
+  .card__name {
+    text-align: center;
+    text-transform: uppercase;
+    color: #252c30;
+    line-height: 24px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal; }
+    .card__name:not(:last-child) {
+      margin-bottom: 1px; }
+  .card__descr {
+    text-align: center;
+    color: #252c30;
+    line-height: 24px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal; }
 
 .services {
   padding-top: 80px;
@@ -601,3 +648,88 @@ body {
   margin-bottom: 30px; }
   .page-about__paragraph--no-margin {
     margin-bottom: 0; }
+
+.page-clients {
+  padding-top: 90px; }
+  .page-clients__heading {
+    padding-bottom: 40px; }
+  .page-clients__gratitude {
+    padding-top: 100px;
+    padding-bottom: 140px; }
+    .page-clients__gratitude-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .page-clients__gratitude-list li:nth-child(n + 4) {
+        margin-top: 20px; }
+  .page-clients__paragraph {
+    margin-bottom: 50px; }
+    .page-clients__paragraph--gratitude {
+      text-align: center;
+      max-width: 735px;
+      margin-left: auto;
+      margin-right: auto; }
+  .page-clients__roster {
+    margin-top: 30px;
+    padding-top: 70px;
+    padding-bottom: 150px;
+    background-color: #f6f6f6; }
+  .page-clients__lists-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .page-clients__item:not(:last-child) {
+    margin-bottom: 95px; }
+  .page-clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 515px;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .page-clients__list-heading {
+      margin-bottom: 55px;
+      text-align: left; }
+      .page-clients__list-heading:before {
+        left: 0;
+        -webkit-transform: none;
+                transform: none; }
+  .page-clients__sublist {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .page-clients__sublist-item {
+      position: relative;
+      padding-left: 35px; }
+      .page-clients__sublist-item:before {
+        position: absolute;
+        top: 15px;
+        left: 3px;
+        display: block;
+        width: 4px;
+        height: 4px;
+        content: '';
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        border-radius: 100%;
+        background-color: #232323; }

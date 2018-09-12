@@ -1,0 +1,39 @@
+.card {
+  display: block;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 350px;
+  min-height: 140px;
+  padding: 25px 35px;
+
+  background-color: #f6f6f6;
+
+  &__name {
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #252c30;
+
+    line-height: 24px;
+
+    @include make-ff-nova(20px, 500);
+
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+  }
+
+  &__descr {
+    text-align: center;
+
+    color: #252c30;
+
+    line-height: 24px;
+
+    @include make-ff-nova(18px);
+  }
+}

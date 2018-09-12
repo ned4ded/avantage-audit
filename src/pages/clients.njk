@@ -1,0 +1,129 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'clients') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--clients">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Клиенты</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <p class="col-12 paragraph page-clients__paragraph">
+        Высокое качество наших услуг в области консалтинга, аудита, бухгалтерского учета и оценки стоимости отмечают все наши клиенты и партнеры. Среди них - промышленные и энергетические предприятия, субъекты естественных монополий, ФГУПы, некоммерческие объединения, общественные организации, фонды, образовательные учреждения и другие организации. Лучшей оценкой нашего труда стали прочные, длительные и взаимовыгодные отношения. Качество нашей работы также подтверждается отсутствием судебных дел и финансовых санкций со стороны клиентов и государственных контролирующих органов, а также заключение Комиссии по контролю качества и соблюдения профессиональной этики СРО НП «Аудиторская Палата России».
+      </p>
+
+      <p class="col-12 paragraph page-clients__paragraph">
+        Высокую профессиональную репутацию нашей компании могут подтвердить более трехсот наших клиентов. Мы имеем значительный опыт оказания аудиторских и консалтинговых услуг предприятиям следующих отраслей:
+      </p>
+    </div>
+  </div>
+
+  <div class="container-fluid page-clients__roster">
+    {% set columnOneClients = datasets.get("clients")["column-one"] %}
+    {% set columnTwoClients = datasets.get("clients")["column-two"] %}
+
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 page-clients__lists-container">
+
+              <ul class="page-clients__list">
+                {% for industry in columnOneClients %}
+                <li class="page-clients__item">
+                  <p class="heading page-clients__list-heading">{{ industry.name }}</p>
+                  <ul class="paragraph page-clients__sublist">
+                    {% for client in industry.clients %}
+                    <li class="page-clients__sublist-item">{{ client }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endfor %}
+              </ul>
+
+              <ul class="page-clients__list">
+                {% for industry in columnTwoClients %}
+                <li class="page-clients__item">
+                  <p class="heading page-clients__list-heading">{{ industry.name }}</p>
+                  <ul class="paragraph page-clients__sublist">
+                    {% for client in industry.clients %}
+                    <li class="page-clients__sublist-item">{{ client }}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endfor %}
+              </ul>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page-clients__gratitude">
+    {% set gratitude = datasets.get("clients")["gratitude"] %}
+
+    <div class="row">
+      <div class="col-12">
+        {{heading.make(false, 'Благодарности', 'page-clients__gratitude-heading')}}
+      </div>
+
+      <p class="col-12 paragraph page-clients__paragraph page-clients__paragraph--gratitude">
+        Слова благодарности наших клиентов наилучшим образом характеризуют положительный эффект от сотрудничества с нашей компанией
+      </p>
+
+      <div class="col-12">
+        <ul class="page-clients__gratitude-list">
+          <li class="card">
+            <span class="card__name">ОАО "КНИИМ"</span>
+          </li>
+
+          <li class="card">
+            <span class="card__name">ФГБУК Государственный академический театр России</span>
+          </li>
+
+          <li class="card">
+            <span class="card__name">МАТИ</span>
+            <span class="card__descr">"Российский государственный технологический университет имени К.Э.Циолковского"</span>
+          </li>
+
+          <li class="card">
+            <span class="card__name">ОАО "НОВО"</span>
+          </li>
+
+          <li class="card">
+            <span class="card__name">ОАО "Астраханский ликеро-водочный завод"</span>
+          </li>
+
+          <li class="card">
+            <span class="card__name">ФГУП НЦ "Сигнал"</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
