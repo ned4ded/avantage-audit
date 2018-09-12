@@ -118,6 +118,8 @@ body {
 
 .header {
   background-color: #2d3e50; }
+  .header__logotype {
+    display: block; }
   .header__content {
     display: -webkit-box;
     display: -ms-flexbox;
