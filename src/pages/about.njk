@@ -1,0 +1,138 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'about') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--about">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">О Компании</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-about__info">
+      <div class="col-12">
+        {{heading.make(false, 'Аудиторско-консальтуцонная группа „Авантаж Аудит“', 'page-about__heading')}}
+      </div>
+
+      <div class="col-8">
+        <p class="paragraph page-about__paragraph">Аудиторско-консультационная группа «Авантаж Аудит» входит в Топ-100 крупнейших международных и российских аудиторско-консультационных компаний согласно ежегодному рейтингу РА "Эксперт".</p>
+
+        <p class="paragraph page-about__paragraph">Мы имеем более чем 20-летний опыт оказания аудиторских и консалтинговых услуг предприятиям и организациям различных отраслей. В своей работе «Авантаж Аудит» придерживается принципов безусловного соблюдения интересов клиента, своевременного и качественного оказания услуг, взаимного доверия и поддержки. Наши специалисты прошли тщательный профессиональный отбор и имеют большой опыт работы в сложных условиях российского законодательства, что позволяет быстро выявлять проблемы клиентов и находить комплексные решения.</p>
+      </div>
+
+      <div class="col-4">
+        <img src="{{ paths.imgs + 'about-info-photo.jpg' }}" alt="Company's building" width="353" height="256">
+      </div>
+
+      <div class="col-12 paragraph page-about__paragraph">
+        <p class="page-about__list-heading">ООО «Авантаж Аудит» имеет аккредитацию при:</p>
+        <ul class="page-about__list">
+          <li>Федеральном агентстве по промышленности;</li>
+          <li>Министерстве экономики Московской области;</li>
+          <li>Министерстве имущественных отношений Московской области;</li>
+          <li>Российском обществе оценщиков;</li>
+          <li>НП СОАУ "Меркурий".</li>
+        </ul>
+      </div>
+
+      <div class="col-12 paragraph page-about__paragraph">
+        <p class="page-about__list-heading">А так же является членом ряда профессиональных объединений:</p>
+        <ul class="page-about__list">
+          <li>Российский союз аудиторов (Ассоциация);</li>
+          <li>Межрегиональный центр экспертных и аудиторских организаций ЖКХ;</li>
+          <li>СРО РСА. ОРНЗ 11603092904;</li>
+          <li>Международная ассоциация независимых компаний, предоставляющих услуги в области аудита, права, бухгалтерского учета, налогового и бизнес консультирования "Morison KSi Limited".</li>
+        </ul>
+      </div>
+
+      <p class="col-12 paragraph page-about__paragraph">
+        Качество нашей работы подтверждается отсутствием судебных дел и финансовых санкций со стороны клиентов и государственных контролирующих органов, а также заключением Комиссии по контролю качества и соблюдения профессиональной этики НП "Аудиторская Палата России".
+      </p>
+
+      <p class="col-12 paragraph page-about__paragraph">
+        Качество нашей работы подтверждается отсутствием судебных дел и финансовых санкций со стороны клиентов и государственных контролирующих органов, а также заключением Комиссии по контролю качества и соблюдения профессиональной этики НП "Аудиторская Палата России".
+      </p>
+
+      <div class="col-12 paragraph page-about__paragraph">
+        <ul class="page-about__list">
+          <li>Внешняя проверка качества работы ООО «Авантаж Аудит» проведена Управлением Федерального казначейства по Московской области.</li>
+          <li>Решением Комиссии по координации аудиторской деятельности при Мэре Москвы АКГ «Авантаж Аудит» включена в Реестр аудиторских фирм, положительно зарекомендовавших себя на рынке аудиторских услуг г. Москвы.</li>
+          <li>Решением Комитета по контролю качества СРО НП АПР аудиторская деятельность ООО "Авантаж Аудит" признана соответствующей действующему законодательству, регулирующему аудиторскую деятельность в Российской Федерации, федеральным правилам (стандартам) аудиторской деятельности, правилам (стандартам) аудиторской деятельности СРО НП АПР, правилам независимости аудиторов и аудиторских организаций и кодексу профессиональной этики аудиторов. Заключение № 166 от 06.11.2015г.</li>
+        </ul>
+      </div>
+
+      <p class="col-12 paragraph page-about__paragraph">
+        Профессиональная деятельность компании застрахована в ОАО "Альфа Страхование" (полис страхования ответственности аудиторской организации № 08205/756/70028/6 от 20.01.2016 г.) на страховую сумму в 501 000 000 рублей. За всю историю существования нашей организации страховых случаев (предъявление обоснованных претензий к качеству проделанной работы и требование возмещения причиненного ущерба) не было.
+      </p>
+
+      <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+        Компания «Авантаж Аудит» прошла сертификацию менеджмента качества оказываемых услуг.
+      </p>
+
+      <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+        Сертификат соответствия требованиям ГОСТ Р ИСО 9001-2008 (ISO 9001:2008) № РОСС RU. 3609.04ЧЖ00/ЕС.С.О.02.01.001789-16
+      </p>
+    </div>
+  </div>
+
+  <div class="container-fluid page-about__contacts">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              {{heading.make(false, 'Контакты', 'page-about__heading page-about__heading--contacts')}}
+            </div>
+
+            <p class="col-12 paragraph page-about__paragraph">
+              ООО "Авантаж Аудит"
+            </p>
+            <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+              143405, Московская обл., г. Красногорск, ул. Строительная, д.5, пом. VII (офис № 29)
+            </p>
+            <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+              ИНН/КПП 5024045017/ 502401001 ОКПО 53980079 ОГРН 1025002865799
+            </p>
+            <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+              Почтовый адрес:
+            </p>
+            <p class="col-12 paragraph page-about__paragraph">
+              143405, Россия, г.Красногорск, Московской области, а/я 241.
+            </p>
+            <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+              Наш офис в Москве:
+            </p>
+            <p class="col-12 paragraph page-about__paragraph">
+              127083, г. Москва ул. Мишина, дом 56 стр. 2
+            </p>
+            <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+              Тел./факс: 8 (495) 787-64-29, 787-64-30, 787-64-31
+            </p>
+            <p class="col-12 paragraph page-about__paragraph page-about__paragraph--no-margin">
+              Тел./факс: 8 (495) 787-64-29, 787-64-30, 787-64-31
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

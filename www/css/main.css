@@ -199,6 +199,10 @@ body {
   background-repeat: 0;
   background-position: center;
   background-size: cover; }
+  .jumbotron--about {
+    padding-top: 185px;
+    padding-bottom: 75px;
+    background-image: url("../assets/imgs/about-jumbotron-bg.jpg"); }
   .jumbotron__heading {
     position: relative;
     max-width: 510px;
@@ -220,6 +224,11 @@ body {
       height: 5px;
       content: '';
       background-color: #fece76; }
+  .jumbotron--about .jumbotron__heading {
+    padding: 0;
+    margin: 0; }
+    .jumbotron--about .jumbotron__heading:before {
+      display: none; }
   .jumbotron__btn-container {
     margin: 0; }
 
@@ -543,3 +552,52 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-top: 7px; }
+
+.page-about__info {
+  padding-top: 110px;
+  padding-bottom: 140px; }
+
+.page-about__contacts {
+  background-color: #f6f6f6;
+  padding-top: 110px;
+  padding-bottom: 140px; }
+
+.page-about__heading {
+  margin: 0;
+  text-align: left;
+  max-width: 540px;
+  margin-bottom: 50px; }
+  .page-about__heading:before {
+    left: 0;
+    -webkit-transform: none;
+            transform: none; }
+
+.page-about__list-heading {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.page-about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .page-about__list li {
+    position: relative;
+    padding-left: 35px; }
+    .page-about__list li:before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 15px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: #232323; }
+
+.page-about__paragraph {
+  margin-top: 0;
+  margin-bottom: 30px; }
+  .page-about__paragraph--no-margin {
+    margin-bottom: 0; }

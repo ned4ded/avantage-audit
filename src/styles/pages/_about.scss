@@ -1,0 +1,62 @@
+.page-about {
+  &__info {
+    padding-top: 110px;
+    padding-bottom: 140px;
+  }
+
+  &__contacts {
+    background-color: #f6f6f6;
+    padding-top: 110px;
+    padding-bottom: 140px;
+  }
+
+  &__heading {
+    margin: 0;
+    text-align: left;
+    max-width: 540px;
+    margin-bottom: 50px;
+
+    &:before {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  &__list-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li {
+      position: relative;
+      padding-left: 35px;
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 3px;
+        top: 15px;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: $semi-color-brown;
+      }
+    }
+  }
+
+  &__paragraph {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    &--no-margin {
+      margin-bottom: 0;
+    }
+  }
+}
