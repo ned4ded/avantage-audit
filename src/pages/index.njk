@@ -118,14 +118,14 @@
 
       <div class="col-12">
         <p class="paragraph clients__paragraph">
-          Отраслевые знания и опыт позволяют нам эффективно решать проблемы компаний, принося максимальную пользу нашим клиентам.
+          Мы придерживается принципов безусловного соблюдения интересов клиента, своевременного и качественного оказания услуг, взаимного доверия и поддержки.
         </p>
       </div>
 
       <ul class="clients__list">
         {% for client in clients %}
           <li class="clients__item">
-            <img class="clients__logotype{{ ' ' + client.mods if client.mods }}" src="{{ path.imgs + client.src}}" alt="{{ client.name }}">
+            <img class="clients__logotype{{ ' ' + client.mods if client.mods }}" src="{{ paths.imgs + client.src}}" alt="{{ client.name }}">
           </li>
         {% endfor %}
       </ul>

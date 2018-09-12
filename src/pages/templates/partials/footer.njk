@@ -4,73 +4,77 @@
 <div class="container-fluid footer">
   <div class="row">
     <div class="col-12">
-      <footer class="container footer__content">
-        <div class="col-3">
-          <img class="footer__logotype" src="{{ paths.imgs + 'aa-logotype.png' }}" alt="Avantage Audit Logotype" width="151" height="23">
-        </div>
+      <div class="container">
+        <footer class="row">
+          <div class="col-3">
+            <img class="footer__logotype" src="{{ paths.imgs + 'aa-logotype.png' }}" alt="Avantage Audit Logotype" width="151" height="23">
+          </div>
 
-        <nav class="col-9">
-          <ul class="footer__nav">
-            <li class="footer__nav-item">
-              <a class="footer__nav-heading" href="{{ paths.services }}">Услуги</a>
-            </li>
+          <nav class="col-9 footer__content">
+            <ul class="footer__nav footer__nav--services">
+              <li class="footer__nav-item">
+                <a class="footer__nav-heading" href="{{ paths.services }}">Услуги</a>
+              </li>
 
-            <li class="footer__nav-item">
-              <a class="footer__nav-text" href="">Аудит</a>
-            </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-text">Аудит</a>
+              </li>
 
-            <li class="footer__nav-item">
-              <a class="footer__nav-text" href="">Консалтинг</a>
-            </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-text">Консалтинг</a>
+              </li>
 
-            <li class="footer__nav-item">
-              <a class="footer__nav-text" href="">Налоги</a>
-            </li>
-          </ul>
+              <li class="footer__nav-item">
+                <a class="footer__nav-text">Налоги</a>
+              </li>
+            </ul>
 
-          <ul class="footer__nav">
-            <li class="footer__nav-item">
-              <a class="footer__nav-heading" href="{{ paths.clients }}">Клиенты</a>
-            </li>
+            <ul class="footer__nav footer__nav--clients">
+              <li class="footer__nav-item">
+                <a class="footer__nav-heading" href="{{ paths.clients }}">Клиенты</a>
+              </li>
 
-            <li class="footer__nav-item">
-              <a class="footer__nav-text" href="">Отрасли</a>
-            </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-text">Отрасли</a>
+              </li>
 
-            <li class="footer__nav-item">
-              <a class="footer__nav-text" href="">Благодарности</a>
-            </li>
-          </ul>
+              <li class="footer__nav-item">
+                <a class="footer__nav-text">Благодарности</a>
+              </li>
+            </ul>
 
-          <ul class="footer__nav">
-            <li class="footer__nav-item">
-              <a class="footer__nav-heading" href="{{ paths.about }}">О компании</a>
-            </li>
-          </ul>
+            <ul class="footer__nav footer__nav--about">
+              <li class="footer__nav-item">
+                <a class="footer__nav-heading" href="{{ paths.about }}">О компании</a>
+              </li>
+            </ul>
 
-          <ul class="footer__nav footer__nav--contacts">
-            <li class="footer__nav-item">
-              <a class="footer__nav-heading">Контакты</a>
-            </li>
+            <ul class="footer__nav footer__nav--contacts">
+              <li class="footer__nav-item">
+                <a class="footer__nav-heading">Контакты</a>
+              </li>
 
-            <li class="footer__nav-item">
-              {{ contact.make('+7(495)787-64-29', 'tel') }}
-            </li>
+              <li class="footer__nav-item">
+                {{ contact.make('+7(495)787-64-29', 'tel') }}
+              </li>
 
-            <li class="footer__nav-item">
-              {{ contact.make('info@avantage-audit.ru', 'email') }}
-            </li>
+              <li class="footer__nav-item">
+                {{ contact.make('info@avantage-audit.ru', 'email-full') }}
+              </li>
 
-            <li class="footer__nav-item">
-              {{ contact.make('127083, г. Москва, ул. Мишина, дом 56 стр. 2', 'address') }}
-            </li>
-          </ul>
-        </nav>
-      </footer>
+              <li class="footer__nav-item">
+                {{ contact.make('127083, г. Москва, ул. Мишина, дом 56 стр. 2', 'address') }}
+              </li>
+            </ul>
+          </nav>
+        </footer>
+      </div>
     </div>
   </div>
 
-  <p class="footer__copyright">
-     2018 © Аудиторская группа «Авантаж Аудит»
-  </p>
+  <div class="row">
+    <p class="footer__copyright">
+      2018 © Аудиторская группа «Авантаж Аудит»
+    </p>
+  </div>
 </div>

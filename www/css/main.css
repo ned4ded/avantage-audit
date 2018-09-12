@@ -107,6 +107,14 @@ body {
       background-image: url("../assets/imgs/icon_email.png");
       background-repeat: no-repeat;
       background-position: center; }
+    .contact__icon--email-full {
+      background-image: url("../assets/imgs/icon_email--full.png");
+      background-repeat: no-repeat;
+      background-position: center; }
+    .contact__icon--address {
+      background-image: url("../assets/imgs/icon_address.png");
+      background-repeat: no-repeat;
+      background-position: center; }
 
 .header {
   background-color: #2d3e50; }
@@ -167,6 +175,7 @@ body {
     margin-right: 65px; }
   .nav__link {
     display: inline-block;
+    padding-top: 5px;
     text-decoration: none;
     color: #252c30;
     border-bottom: 3px solid transparent;
@@ -420,3 +429,117 @@ body {
     margin-top: -20px; }
     .industries__list li {
       margin-top: 20px; }
+
+.clients {
+  padding-top: 125px;
+  padding-bottom: 125px; }
+  .clients__heading {
+    margin-bottom: 20px; }
+  .clients__paragraph {
+    max-width: 705px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    text-align: center; }
+  .clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin: 0;
+    list-style: none; }
+  .clients__item {
+    width: 25%;
+    min-height: 104px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .clients__item:nth-child(n + 5) {
+      margin-top: 100px; }
+  .clients__logotype {
+    display: inline-block; }
+
+.footer {
+  padding-top: 80px;
+  background-color: #2d3e50; }
+  .footer__copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 69px;
+    margin: 0;
+    color: #9ca7b2;
+    background-color: #29313a;
+    line-height: 100%;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 55px; }
+  .footer__nav {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .footer__nav--contacts {
+      width: 255px;
+      margin-left: 80px; }
+    .footer__nav-item:not(:last-child) {
+      margin-bottom: 20px; }
+    .footer__nav--contacts .footer__nav-item:not(:last-child) {
+      margin-bottom: 15px; }
+    .footer__nav-text {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      color: white; }
+    .footer__nav-heading {
+      display: inline-block;
+      margin-bottom: 25px;
+      text-decoration: none;
+      color: white;
+      line-height: 100%;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal; }
+      .footer__nav-heading:hover {
+        text-decoration: underline; }
+  .footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 7px; }

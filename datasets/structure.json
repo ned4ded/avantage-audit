@@ -40,29 +40,44 @@
 
   "clients" : [
     {
-      "name" : "Гостехстрой",
-      "src" : "logotype_gostechstroy.png",
-      "mod" : "govtech"
+      "name" : "МИГ",
+      "src" : "logotype_mig.png",
+      "mod" : "mig"
+    },
+    {
+      "name" : "КТРВ",
+      "src" : "logotype_ktrv.png",
+      "mod" : "ktrv"
+    },
+    {
+      "name" : "Россети",
+      "src" : "logotype_rosseti.png",
+      "mod" : "rosseti"
     },
     {
       "name" : "Гостехстрой",
-      "src" : "logotype_gostechstroy.png",
+      "src" : "logotype_govtech.png",
       "mod" : "govtech"
     },
     {
-      "name" : "Гостехстрой",
-      "src" : "logotype_gostechstroy.png",
-      "mod" : "govtech"
+      "name" : "ВШЭ",
+      "src" : "logotype_vshe.png",
+      "mod" : "vshe"
     },
     {
-      "name" : "Гостехстрой",
-      "src" : "logotype_gostechstroy.png",
-      "mod" : "govtech"
+      "name" : "Hatber",
+      "src" : "logotype_hatber.png",
+      "mod" : "hatber"
     },
     {
-      "name" : "Гостехстрой",
-      "src" : "logotype_gostechstroy.png",
-      "mod" : "govtech"
+      "name" : "ММЗ Знамя",
+      "src" : "logotype_mmz-znamia.png",
+      "mod" : "mmz-znamia"
+    },
+    {
+      "name" : "Дельта",
+      "src" : "logotype_delta.png",
+      "mod" : "delta"
     }
   ]
 }

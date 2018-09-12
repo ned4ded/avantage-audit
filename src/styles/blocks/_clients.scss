@@ -1,0 +1,41 @@
+.clients {
+  padding-top: 125px;
+  padding-bottom: 125px;
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__paragraph {
+    max-width: 705px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    width: 25%;
+    min-height: 104px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(n + 5) {
+      margin-top: 100px;
+    }
+  }
+
+  &__logotype {
+    display: inline-block;
+  }
+}

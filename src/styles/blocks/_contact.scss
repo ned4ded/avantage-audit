@@ -30,5 +30,17 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
+    &--email-full {
+      background-image: url('../assets/imgs/icon_email--full.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--address {
+      background-image: url('../assets/imgs/icon_address.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
