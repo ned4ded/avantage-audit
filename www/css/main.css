@@ -290,6 +290,54 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between; }
 
+.infographics {
+  background-color: #2d3e50;
+  background-image: url("../assets/imgs/main-infographics-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto; }
+  .infographics__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-height: 272px;
+    padding-top: 12px; }
+  .infographics__figure {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f8c870;
+    line-height: 100%;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    font-style: normal; }
+  .infographics__caption {
+    display: block;
+    text-align: center;
+    color: white;
+    line-height: 1.16;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: normal; }
+  .infographics__item {
+    margin: 0;
+    padding: 0;
+    max-width: 325px; }
+
 .industry {
   display: -webkit-box;
   display: -ms-flexbox;
