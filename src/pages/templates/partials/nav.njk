@@ -1,0 +1,27 @@
+{% macro make(links, pageName) %}
+
+<div class="container">
+  <div class="row">
+    <nav class="col-12 nav">
+      <ul class="nav__block">
+        <li class="nav__item">
+          <a class="nav__link{{ ' active' if pageName === 'main'}}" href="{{ links.main }}">Главная</a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__link{{ ' active' if pageName === 'services'}}" href="{{ links.services }}">Услуги</a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__link{{ ' active' if pageName === 'clients'}}" href="{{ links.clients }}">Клиенты</a>
+        </li>
+      </ul>
+
+      <p class="nav__block">
+        <a class="nav__link{{ ' active' if pageName === 'about'}}" href="{{links.about}}">О Компании</a>
+      </p>
+    </nav>
+  </div>
+</div>
+
+{% endmacro %}

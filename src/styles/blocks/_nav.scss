@@ -1,0 +1,46 @@
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  &__block {
+    display: inline-flex;
+    align-items: flex-end;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 65px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: $semi-color-dark;
+    border-bottom: 3px solid transparent;
+
+    line-height: 53px;
+
+    @include make-ff-nova(16px, 500);
+
+    &:hover {
+      color: $semi-color-darkest;
+      border-bottom: 3px solid $main-color-contrast;
+    }
+
+    &.active {
+      color: $semi-color-darkest;
+      border-bottom: 3px solid $main-color-contrast;
+
+      font-weight: 600;
+    }
+  }
+}

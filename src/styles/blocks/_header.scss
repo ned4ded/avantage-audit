@@ -1,0 +1,29 @@
+.header {
+  background-color: $main-color-dark;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    min-height: 69px;
+  }
+
+  &__contact {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: row nowrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+}

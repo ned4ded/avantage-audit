@@ -1,0 +1,42 @@
+.jumbotron {
+  padding-top: 287px;
+  padding-bottom: 297px;
+
+  background-image: url('../assets/imgs/main-jumbotron-bg.jpg');
+  background-repeat: 0;
+  background-position: center;
+  background-size: cover;
+
+  &__heading {
+    position: relative;
+
+    max-width: 510px;
+    margin: 0;
+    margin-bottom: 31px;
+    padding: 0;
+    padding-top: 32px;
+
+    color: white;
+
+    @include make-ff-nova(41px);
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 57px;
+      height: 5px;
+
+      content: '';
+
+      background-color: $main-color-contrast;
+    }
+  }
+
+  &__btn-container {
+    margin: 0;
+  }
+}

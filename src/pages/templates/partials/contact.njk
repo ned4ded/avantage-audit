@@ -1,0 +1,6 @@
+{% macro make(text, iconName, mods) %}
+  <p class="contact{{ ' ' + mods if mods }}">
+    <span class="contact__icon contact__icon--{{iconName}}"></span>
+    <span>{{ text }}</span>
+  </p>
+{% endmacro %}

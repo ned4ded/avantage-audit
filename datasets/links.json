@@ -1,0 +1,6 @@
+{
+  "main" : "index.html",
+  "services" : "services.html",
+  "clients" : "clients.html",
+  "about" : "about.html"
+}

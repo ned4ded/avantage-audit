@@ -1,0 +1,30 @@
+.industries {
+  $mg: 20px;
+
+  padding-top: 85px;
+  padding-bottom: 115px;
+  background-color: #f6f6f6;
+
+  &__heading {
+    margin-bottom: 22px;
+  }
+
+  &__paragraph {
+    max-width: 715px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: -$mg;
+
+    & li {
+      margin-top: $mg;
+    }
+  }
+}

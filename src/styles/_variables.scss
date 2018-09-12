@@ -1,0 +1,38 @@
+$main-color-dark: rgb(45, 62, 80);
+$main-color-contrast: #fece76;
+$semi-color-dark: #252c30;
+$semi-color-brown: #232323;
+$semi-color-darkest: #06111d;
+
+$ff-nova: 'Proxima Nova', sans-serif;
+@mixin make-ff-nova($fz: 18px, $fw: 400, $fs: normal) {
+  font-family: $ff-nova;
+  font-size: $fz;
+  font-weight: $fw;
+  font-style: $fs;
+}
+
+$breakpoint-xs: 575.98px;
+$breakpoint-sm: 767.98px;
+$breakpoint-md: 991.98px;
+$breakpoint-lg: 1199.98px;
+
+$breakpoints: (
+  'xs': $breakpoint-xs,
+  'sm': $breakpoint-sm,
+  'md': $breakpoint-md,
+  'lg': $breakpoint-lg,
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

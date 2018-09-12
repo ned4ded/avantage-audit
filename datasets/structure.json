@@ -1,0 +1,68 @@
+{
+  "specializations" : [
+    {
+      "name" : "электроэнергетика",
+      "mod" : "energy"
+    },
+    {
+      "name" : "транспорт и связь",
+      "mod" : "transport"
+    },
+    {
+      "name" : "наука и образование",
+      "mod" : "science"
+    },
+    {
+      "name" : "химическая и нефтехимическая промышленность",
+      "mod" : "chemistry"
+    },
+    {
+      "name" : "строительство",
+      "mod" : "building"
+    },
+    {
+      "name" : "машиностроение и металлургическое производство",
+      "mod" : "metal-industry"
+    },
+    {
+      "name" : "медицина",
+      "mod" : "medicine"
+    },
+    {
+      "name" : "финансовый сектор",
+      "mod" : "finances"
+    },
+    {
+      "name" : "оптовая и розничная торговля",
+      "mod" : "trading"
+    }
+  ],
+
+  "clients" : [
+    {
+      "name" : "Гостехстрой",
+      "src" : "logotype_gostechstroy.png",
+      "mod" : "govtech"
+    },
+    {
+      "name" : "Гостехстрой",
+      "src" : "logotype_gostechstroy.png",
+      "mod" : "govtech"
+    },
+    {
+      "name" : "Гостехстрой",
+      "src" : "logotype_gostechstroy.png",
+      "mod" : "govtech"
+    },
+    {
+      "name" : "Гостехстрой",
+      "src" : "logotype_gostechstroy.png",
+      "mod" : "govtech"
+    },
+    {
+      "name" : "Гостехстрой",
+      "src" : "logotype_gostechstroy.png",
+      "mod" : "govtech"
+    }
+  ]
+}

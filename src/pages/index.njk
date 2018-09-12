@@ -1,0 +1,134 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'main') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">ООО "Авантаж Аудит" - лидирующая аудиторско-консальтуционная группа</h1>
+              <p class="jumbotron__btn-container">
+                <a href="{{ paths.about }}" class="btn jumbotron__btn">Подробнее</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container services">
+    <div class="row">
+      <div class="col-12">
+        {{ heading.make('наши', 'услуги', 'services__heading') }}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph services__paragraph">
+          Мы помогаем решать задачи, с которыми бизнес может столкнуться на разных этапах своего жизненного цикла. Для основных групп наших клиентов мы разработали целевые программы.
+        </p>
+      </div>
+
+      <div class="col-12 services__cards">
+        {{ serviceCard.make(['Аудит и ', 'оценка ', 'бизнеса'], 'service-card--audit') }}
+
+        {{ serviceCard.make(['Стратегический и ', 'управленческий ', 'консалтинг'], 'service-card--strategy') }}
+
+        {{ serviceCard.make(['Налоговое и ', 'юридическое ', 'сопровождение'], 'service-card--taxes') }}
+
+        {{ serviceCard.make(['Другие ', 'услуги ', ''], 'service-card--other') }}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid industries">
+    {% set specs = datasets.get('structure').specializations %}
+
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              {{ heading.make('отрасли', 'специализации', 'industries__heading') }}
+            </div>
+
+            <div class="col-12">
+              <p class="paragraph industries__paragraph">
+                Отраслевые знания и опыт позволяют нам эффективно решать проблемы компаний, принося максимальную пользу нашим клиентам.
+              </p>
+            </div>
+
+            <ul class="col-12 industries__list">
+              {% for item in specs %}
+                <li class="industry">
+                  <span class="industry__icon industry__icon--{{ item.mod }}"></span>
+                  <span class="industry__name">{{ item.name | capitalize }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid infographics">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <p class="col-4">
+              <span class="infographics__figure">> 20 Лет </span><span class="infographics__caption">Экспертизы на российском и международном рынке</span>
+            </p>
+
+            <p class="col-4">
+              <span class="infographics__figure">300 + </span><span class="infographics__caption">Успешных кейсов крупнейших предприятий</span>
+            </p>
+
+            <p class="col-4">
+              <span class="infographics__figure">> 500 млн. руб </span><span class="infographics__caption">Размер страховой суммы деятельности компании</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container clients">
+    {% set clients = datasets.get('structure').clients %}
+
+    <div class="row">
+      <div class="col-12">
+        {{ heading.make('наши', 'клиенты', 'clients__heading') }}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph clients__paragraph">
+          Отраслевые знания и опыт позволяют нам эффективно решать проблемы компаний, принося максимальную пользу нашим клиентам.
+        </p>
+      </div>
+
+      <ul class="clients__list">
+        {% for client in clients %}
+          <li class="clients__item">
+            <img class="clients__logotype{{ ' ' + client.mods if client.mods }}" src="{{ path.imgs + client.src}}" alt="{{ client.name }}">
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,3 @@
+{% macro make(highlight, rest, mods) %}
+  <h2 class="heading{{ ' ' + mods if mods}}"><span class="heading__highlight">{{ highlight | capitalize }}</span> {{ rest | capitalize }}</h2>
+{% endmacro %}

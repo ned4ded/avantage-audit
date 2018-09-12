@@ -1,0 +1,22 @@
+{% set paths = datasets.get('paths') %}
+{% import "partials/contact.njk" as contact %}
+
+<header class="container-fluid header">
+  <div class="row">
+    <div class="col-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 header__content">
+            <img class="header__logotype" src="{{ paths.imgs + 'aa-logotype.png' }}" alt="Avantage Audit Logotype" width="151" height="23">
+
+            <ul class="header__contacts">
+              <li class="header__contact">{{ contact.make('+7(495)787-64-29', 'tel') }}</li>
+
+              <li class="header__contact">{{ contact.make('info@avantage-audit.ru', 'email', 'contact--narrow') }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

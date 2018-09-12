@@ -1,0 +1,7 @@
+{% macro make(lines, mods) %}
+  <p class="service-card{{ ' ' + mods if mods}}">
+    {% for line in lines %}
+      <span class="service-card__line">{{ line }}</span>
+    {% endfor %}
+  </p>
+{% endmacro %}

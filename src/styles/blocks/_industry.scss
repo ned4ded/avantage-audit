@@ -1,0 +1,70 @@
+.industry {
+  display: flex;
+  width: 350px;
+  min-height: 160px;
+  flex-flow: row nowrap;
+  background-color: #ededed;
+  padding: 15px;
+  align-items: center;
+
+  &__name {
+    line-height: 1.16;
+    color: $semi-color-brown;
+
+    @include make-ff-nova(26px, 600);
+  }
+
+  &__icon {
+    min-width: 65px;
+    height: 100%;
+
+    background-position: center;
+    background-size: auto;
+    margin-right: 15px;
+
+    &--energy {
+      background-image: url('../assets/imgs/icon_energy.png');
+      background-repeat: no-repeat;
+    }
+
+    &--transport {
+      background-image: url('../assets/imgs/icon_transport.png');
+      background-repeat: no-repeat;
+    }
+
+    &--science {
+      background-image: url('../assets/imgs/icon_science.png');
+      background-repeat: no-repeat;
+    }
+
+    &--chemistry {
+      background-image: url('../assets/imgs/icon_chemistry.png');
+      background-repeat: no-repeat;
+    }
+
+    &--building {
+      background-image: url('../assets/imgs/icon_building.png');
+      background-repeat: no-repeat;
+    }
+
+    &--metal-industry {
+      background-image: url('../assets/imgs/icon_metal-industry.png');
+      background-repeat: no-repeat;
+    }
+
+    &--medicine {
+      background-image: url('../assets/imgs/icon_medicine.png');
+      background-repeat: no-repeat;
+    }
+
+    &--finances {
+      background-image: url('../assets/imgs/icon_finances.png');
+      background-repeat: no-repeat;
+    }
+
+    &--trading {
+      background-image: url('../assets/imgs/icon_trading.png');
+      background-repeat: no-repeat;
+    }
+  }
+}
