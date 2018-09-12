@@ -31,13 +31,13 @@
     <div class="row">
       <div class="col-12 page-services__block">
         <div class="page-services__cards">
-          {{ serviceCard.make(['Аудит и ', 'оценка ', 'бизнеса'], 'service-card--audit') }}
+          {{ serviceCard.make('#audit', ['Аудит и ', 'оценка ', 'бизнеса'], 'service-card--audit') }}
 
-          {{ serviceCard.make(['Стратегический и ', 'управленческий ', 'консалтинг'], 'service-card--strategy') }}
+          {{ serviceCard.make('#strategy', ['Стратегический и ', 'управленческий ', 'консалтинг'], 'service-card--strategy') }}
 
-          {{ serviceCard.make(['Налоговое и ', 'юридическое ', 'сопровождение'], 'service-card--taxes') }}
+          {{ serviceCard.make('#taxes', ['Налоговое и ', 'юридическое ', 'сопровождение'], 'service-card--taxes') }}
 
-          {{ serviceCard.make(['Другие ', 'услуги ', ''], 'service-card--other') }}
+          {{ serviceCard.make('#other', ['Другие ', 'услуги ', ''], 'service-card--other') }}
         </div>
 
         <p class="paragraph page-services__paragraph page-services__cards-paragraph">
@@ -45,7 +45,7 @@
         </p>
       </div>
 
-      <div class="col-12 page-services__block">
+      <div id="audit" class="col-12 page-services__block">
         {{heading.make(false, 'Аудит и оценка бизнеса', 'page-services__heading')}}
 
         <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
@@ -73,7 +73,7 @@
         </ul>
       </div>
 
-      <div class="col-12 page-services__block">
+      <div id="strategy" class="col-12 page-services__block">
         {{heading.make(false, 'Стратегический и управленческий консалтинг', 'page-services__heading')}}
 
         <p class="paragraph page-services__paragraph">
@@ -103,7 +103,7 @@
         </ul>
       </div>
 
-      <div class="col-12 page-services__block">
+      <div id="taxes" class="col-12 page-services__block">
         {{heading.make(false, 'Налоговое и юридическое сопровождение', 'page-services__heading')}}
 
         <p class="paragraph page-services__paragraph">
@@ -133,7 +133,7 @@
         </ul>
       </div>
 
-      <div class="col-12 page-services__block">
+      <div id="other" class="col-12 page-services__block">
         {{heading.make(false, 'Другие услуги', 'page-services__heading')}}
 
         <p class="paragraph page-services__paragraph page-services__paragraph--other">

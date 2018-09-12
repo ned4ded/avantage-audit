@@ -16,6 +16,7 @@
 
   color: white;
   background-color: $main-color-dark;
+  text-decoration: none;
 
   line-height: $lh;
 
@@ -23,6 +24,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   &--audit {
     background-image: url('../assets/imgs/main-services-audit.jpg');

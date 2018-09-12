@@ -45,13 +45,13 @@
       </div>
 
       <div class="col-12 services__cards">
-        {{ serviceCard.make(['Аудит и ', 'оценка ', 'бизнеса'], 'service-card--audit') }}
+        {{ serviceCard.make(links.services + '#audit', ['Аудит и ', 'оценка ', 'бизнеса'], 'service-card--audit') }}
 
-        {{ serviceCard.make(['Стратегический и ', 'управленческий ', 'консалтинг'], 'service-card--strategy') }}
+        {{ serviceCard.make(links.services + '#strategy', ['Стратегический и ', 'управленческий ', 'консалтинг'], 'service-card--strategy') }}
 
-        {{ serviceCard.make(['Налоговое и ', 'юридическое ', 'сопровождение'], 'service-card--taxes') }}
+        {{ serviceCard.make(links.services + '#taxes', ['Налоговое и ', 'юридическое ', 'сопровождение'], 'service-card--taxes') }}
 
-        {{ serviceCard.make(['Другие ', 'услуги ', ''], 'service-card--other') }}
+        {{ serviceCard.make(links.services + '#other', ['Другие ', 'услуги ', ''], 'service-card--other') }}
       </div>
     </div>
   </div>
@@ -76,10 +76,12 @@
 
             <ul class="col-12 industries__list">
               {% for item in specs %}
-                <li class="industry">
+              <li class="industries__list-item">
+                <a href="{{ links.clients }}" class="industry">
                   <span class="industry__icon industry__icon--{{ item.mod }}"></span>
                   <span class="industry__name">{{ item.name | capitalize }}</span>
-                </li>
+                </a>
+              </li>
               {% endfor %}
             </ul>
           </div>

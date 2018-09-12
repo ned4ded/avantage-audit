@@ -269,6 +269,7 @@ body {
   text-transform: uppercase;
   color: white;
   background-color: #2d3e50;
+  text-decoration: none;
   line-height: 27px;
   font-family: "Proxima Nova", sans-serif;
   font-size: 18px;
@@ -277,6 +278,8 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
+  .service-card:hover {
+    text-decoration: underline; }
   .service-card--audit {
     background-image: url("../assets/imgs/main-services-audit.jpg"); }
   .service-card--strategy {
@@ -436,7 +439,8 @@ body {
   padding: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  text-decoration: none; }
   .industry__name {
     line-height: 1.16;
     color: #232323;
@@ -501,8 +505,12 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 0;
+    list-style: none;
     margin-top: -20px; }
-    .industries__list li {
+    .industries__list-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       margin-top: 20px; }
 
 .clients {

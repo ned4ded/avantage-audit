@@ -21,9 +21,11 @@
     flex-flow: row wrap;
     justify-content: space-between;
     margin: 0;
+    list-style: none;
     margin-top: -$mg;
 
-    & li {
+    &-item {
+      display: flex;
       margin-top: $mg;
     }
   }
