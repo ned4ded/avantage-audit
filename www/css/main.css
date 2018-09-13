@@ -205,6 +205,10 @@ body {
     padding-top: 185px;
     padding-bottom: 75px;
     background-image: url("../assets/imgs/about-jumbotron-bg.jpg"); }
+  .jumbotron--directorate {
+    padding-top: 185px;
+    padding-bottom: 75px;
+    background-image: url("../assets/imgs/directorate-jumbotron-bg.jpg"); }
   .jumbotron--clients {
     padding-top: 185px;
     padding-bottom: 75px;
@@ -236,12 +240,14 @@ body {
       background-color: #fece76; }
   .jumbotron--about .jumbotron__heading,
   .jumbotron--services .jumbotron__heading,
-  .jumbotron--clients .jumbotron__heading {
+  .jumbotron--clients .jumbotron__heading,
+  .jumbotron--directorate .jumbotron__heading {
     padding: 0;
     margin: 0; }
     .jumbotron--about .jumbotron__heading:before,
     .jumbotron--services .jumbotron__heading:before,
-    .jumbotron--clients .jumbotron__heading:before {
+    .jumbotron--clients .jumbotron__heading:before,
+    .jumbotron--directorate .jumbotron__heading:before {
       display: none; }
   .jumbotron__btn-container {
     margin: 0; }
@@ -631,8 +637,12 @@ body {
   padding-top: 110px;
   padding-bottom: 140px; }
 
+.page-about__principles {
+  padding-top: 110px;
+  padding-bottom: 140px;
+  background-color: #f6f6f6; }
+
 .page-about__contacts {
-  background-color: #f6f6f6;
   padding-top: 110px;
   padding-bottom: 140px; }
 
@@ -862,3 +872,64 @@ body {
 
 .page-services__accordion-content {
   display: none; }
+
+.page-directorate__heads {
+  padding-top: 68px;
+  padding-bottom: 85px; }
+  .page-directorate__heads:last-of-type {
+    padding-bottom: 210px; }
+
+.page-directorate__heading {
+  margin: 0;
+  text-align: left;
+  margin-bottom: 0; }
+  .page-directorate__heading:before {
+    left: 0;
+    -webkit-transform: none;
+            transform: none; }
+  .page-directorate__heading-caption {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #252c30;
+    line-height: 24px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal; }
+
+.page-directorate__list-heading {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.page-directorate__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .page-directorate__list--paragraph-like:not(:last-child) {
+    margin-bottom: 30px; }
+  .page-directorate__list li {
+    position: relative; }
+  .page-directorate__list-line {
+    display: block; }
+  .page-directorate__list-marker {
+    padding-left: 15px; }
+    .page-directorate__list-marker:before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 15px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 5px;
+      height: 2px;
+      border-radius: 0;
+      background-color: #232323; }
+
+.page-directorate__paragraph {
+  margin-top: 0;
+  margin-bottom: 30px; }
+  .page-directorate__paragraph--no-margin {
+    margin-bottom: 0; }
+  .page-directorate__paragraph--position--1st {
+    margin-top: 50px; }

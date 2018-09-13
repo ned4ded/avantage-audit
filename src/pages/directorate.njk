@@ -1,0 +1,189 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'directorate') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--directorate">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">О Компании</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-directorate__heads">
+      <div class="col-12">
+        {{heading.make(false, 'Анохова Елена Владимировна', 'page-directorate__heading')}}
+
+        <p class="page-directorate__heading-caption">Председатель Совета директоров компании</p>
+      </div>
+
+      <div class="col-9 paragraph page-directorate__paragraph page-directorate__paragraph--position--1st">
+        <p class="page-directorate__list-heading">Образование:</p>
+        <ul class="page-directorate__list page-directorate__list--paragraph-like">
+          <li>
+            <span class="page-directorate__list-marker page-directorate__list-line">Высшая школа экономики и Минэкономики и Госкомвуза России, </span>
+            <span class="page-directorate__list-line">квалификация экономист по специальности «Бухгалтерский учет и аудит», 1996 год.</span>
+          </li>
+
+          <li>
+            <span class="page-directorate__list-marker page-directorate__list-line">Московский физико-технический институт, </span>
+            <span class="page-directorate__list-line">квалификация инженер-физик по специальности «Прикладная математика и физика»,  1990 год.</span>
+          </li>
+        </ul>
+
+        <p class="page-directorate__list-heading">Дополнительное образование:</p>
+        <ul class="page-directorate__list page-directorate__list--paragraph-like">
+          <li class="page-directorate__list-marker">
+            Квалификационный аттестат аудитора по общему аудиту
+          </li>
+
+          <li class="page-directorate__list-marker">
+            Квалификационный аттестат налогового консультанта
+          </li>
+
+          <li class="page-directorate__list-marker">
+            Диплом АССА по Международной Финансовой Отчетности
+          </li>
+
+          <li class="page-directorate__list-marker">
+            Сертификат и Диплом по менеджменту Открытого Университета (Лондон)
+          </li>
+
+          <li class="page-directorate__list-marker">
+            Свидетельство о повышении квалификации по программе «Управление  государственных и муниципальных заказов».
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-3">
+        <img src="{{ paths.imgs + 'directorate-anohova-photo.jpg' }}" alt="Фотография Аноховой Елены Владимировны" width="239" height="283">
+      </div>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Член Экспертного совета по законодательству о банковской деятельности и аудите при Комитете Государственной Думы по финансовому рынку;
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Член Комиссии по вопросам регулирования аудиторской деятельности Рабочего органа Совета по аудиторской деятельности при Минфине России.
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Вице - президент СРО НП Аудиторская палата России
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Председатель Комитета по обязательному аудиту АПР
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Эксперт по контролю качества аудиторской деятельности и соблюдения профессиональной этики Аудиторской палаты России.
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph">
+        Член Центрального Совета НП АПР
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph">
+        Имеет благодарность Министра финансов РФ за активное содействие Министерству финансов РФ в сфере реализации его функций и полномочий по выработке государственной политики и нормативно-правовому регулированию
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph">
+        Публикации в журналах: «Московский бухгалтер», «Российский налоговый курьер», «Главбух», «ЖКХ», «Аудит», «Аудиторские ведомости»;  газете «Учет. Налоги. Право».
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph  page-directorate__paragraph--no-margin">
+        Акционер. Размер доли (в процентах) 51%.
+      </p>
+    </div>
+
+    <div class="row page-directorate__heads">
+      <div class="col-12">
+        {{heading.make(false, 'Тетерятникова Анна Евгеньевна', 'page-directorate__heading')}}
+
+        <p class="page-directorate__heading-caption">Генеральный директор</p>
+      </div>
+
+      <div class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--position--1st">
+        <p class="page-directorate__list-heading">Образование:</p>
+        <ul class="page-directorate__list page-directorate__list--paragraph-like">
+          <li>
+            <span class="page-directorate__list-marker page-directorate__list-line">Екатеринбургский Гуманитарный университет, </span>
+            <span class="page-directorate__list-line">квалификация экономист по специальности «Финансы и кредит», 1999 год</span>
+          </li>
+        </ul>
+
+        <p class="page-directorate__list-heading">Дополнительное образование:</p>
+        <ul class="page-directorate__list page-directorate__list--paragraph-like">
+          <li class="page-directorate__list-marker">
+            Квалификационный аттестат аудитора по общему аудиту
+          </li>
+        </ul>
+      </div>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Член Некоммерческого партнерства «Аудиторская Палата России»
+      </p>
+    </div>
+
+    <div class="row page-directorate__heads">
+      <div class="col-12">
+        {{heading.make(false, 'Щербаков Константин Борисович', 'page-directorate__heading')}}
+
+        <p class="page-directorate__heading-caption">Заместитель генерального директора</p>
+      </div>
+
+      <div class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--position--1st">
+        <p class="page-directorate__list-heading">Образование:</p>
+        <ul class="page-directorate__list page-directorate__list--paragraph-like">
+          <li>
+            <span class="page-directorate__list-marker page-directorate__list-line">Российская экономическая академия им. Г.В.Плеханова, </span>
+            <span class="page-directorate__list-line">квалификация экономист по специальности «Бухгалтерский учет, анализ и аудит», 2002 год.</span>
+          </li>
+
+          <li>
+            <span class="page-directorate__list-marker page-directorate__list-line">Московский физико-технический институт, </span>
+            <span class="page-directorate__list-line">квалификация инженер-математик по специальности «Прикладная математика и физика», 1994 год.</span>
+          </li>
+        </ul>
+
+        <p class="page-directorate__list-heading">Дополнительное образование:</p>
+        <ul class="page-directorate__list page-directorate__list--paragraph-like">
+          <li class="page-directorate__list-marker">
+            Профессиональная переподготовка в Межотраслевом институте повышения квалификации и переподготовки Российской экономической академии им. Г.В.Плеханова по программе «Профессиональная оценка и экспертиза объектов и прав собственности». Специализация «Оценка стоимости предприятий (бизнеса)», 2003 год.
+          </li>
+
+          <li class="page-directorate__list-marker">
+            Повышение квалификации в Государственном университете управления по программе «Оценка стоимости предприятия (бизнеса) 2007 год.
+          </li>
+        </ul>
+      </div>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Член Общероссийской общественной организации «Российское общество оценщиков».
+      </p>
+
+      <p class="col-12 paragraph page-directorate__paragraph page-directorate__paragraph--no-margin">
+        Акционер. Размер доли (в процентах) 49%
+      </p>
+    </div>
+  </div>
+
+
+{% endblock %}

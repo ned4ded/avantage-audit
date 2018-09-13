@@ -1,0 +1,87 @@
+.page-directorate {
+  &__heads {
+    padding-top: 68px;
+    padding-bottom: 85px;
+
+    &:last-of-type {
+      padding-bottom: 210px;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    text-align: left;
+    margin-bottom: 0;
+
+    &:before {
+      left: 0;
+      transform: none;
+    }
+
+    &-caption {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      color: #252c30;
+
+      line-height: 24px;
+
+      @include make-ff-nova(18px);
+    }
+  }
+
+  &__list-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--paragraph-like:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    & li {
+      position: relative;
+    }
+
+    &-line {
+      display: block;
+    }
+
+    &-marker {
+      padding-left: 15px;
+
+      &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 15px;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 2px;
+        border-radius: 0;
+        background-color: $semi-color-brown;
+      }
+    }
+  }
+
+  &__paragraph {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    &--no-margin {
+      margin-bottom: 0;
+    }
+
+    &--position{
+      &--1st {
+        margin-top: 50px;
+      }
+    }
+  }
+}
