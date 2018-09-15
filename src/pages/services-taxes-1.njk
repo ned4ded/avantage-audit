@@ -1,0 +1,61 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Сопровождение приватизации предприятий', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <ul class="paragraph list list--style--number">
+          <li>
+            <span class="list__line list__heading">Сопровождение разработки программы приватизации предприятий государственных, субъектов Федерации, муниципальных образований:</span>
+
+            <ul class="list list--sublist list--no-padding">
+              <li class="list__marker">подготовка проекта программы (плана) приватизации предприятий (государственных, субъектов Федерации, муниципальных образований)</li>
+              <li class="list__marker">подготовка перечня имущества, подлежащего приватизации</li>
+              <li class="list__marker">подготовка перечня имущества, не подлежащего приватизации</li>
+              <li class="list__marker">подготовка проекта программы (плана) приватизации имущества (государственного, субъектов Федерации, муниципальных образований)</li>
+              <li class="list__marker">подготовка проекта решения исполнительного органа об условиях приватизации предприятий (государственных, субъектов Федерации, муниципальных образований)</li>
+              <li class="list__marker">подготовка проекта решения исполнительного органа об условиях приватизации имущества (государственного, субъектов Федерации, муниципальных образований)</li>
+            </ul>
+          </li>
+          <li>Подготовка документов и сопровождение государственной регистрации открытого акционерного общества, созданного в процессе приватизации</li>
+          <li>Подготовка документов и сопровождение государственной регистрации перехода прав собственности на приватизируемое имущество</li>
+          <li>Подготовка документов и сопровождение государственной регистрации выпуска ценных бумаг открытого акционерного общества, созданного в процессе приватизации</li>
+          <li>Подготовка документов и сопровождение процедуры проведения конкурса (аукциона) по реализации акций открытых акционерных обществ, созданных в процессе приватизации</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

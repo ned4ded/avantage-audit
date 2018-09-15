@@ -3,9 +3,9 @@
 {% import "partials/service-card.njk" as serviceCard %}
 
 {% extends "layout.njk" %}
+{% set links = datasets.get('links') %}
 
 {% block nav %}
-  {% set links = datasets.get('links') %}
 
   {{ nav.make(links, 'services') }}
 {% endblock %}
@@ -116,19 +116,25 @@
             <span class="card__descr">Оказание услуг в области экспертизы тарифов</span>
           </li>
 
-          <li class="card card--align--left">
-            <span class="card__name">Налоговый консалтинг</span>
-            <span class="card__descr">Услуги в области бухгалтерского учета, налогообложения и предпринимательского права</span>
+          <li>
+            <a class="card card--align--left card--link" href="{{ links.servicesTaxes3 }}">
+              <span class="card__name">Налоговый консалтинг</span>
+              <span class="card__descr">Услуги в области бухгалтерского учета, налогообложения и предпринимательского права</span>
+            </a>
           </li>
 
-          <li class="card card--align--left">
-            <span class="card__name">Юридические услуги</span>
-            <span class="card__descr">Регулирование имущественных и налоговых споров, представительство и защита интересов в Арбитражном суде</span>
+          <li>
+            <a class="card card--align--left card--link" href="{{ links.servicesTaxes2 }}">
+              <span class="card__name">Юридические услуги</span>
+              <span class="card__descr">Регулирование имущественных и налоговых споров, представительство и защита интересов в Арбитражном суде</span>
+            </a>
           </li>
 
-          <li class="card card--align--left">
-            <span class="card__name">Приватизация</span>
-            <span class="card__descr">Оказание услуг по сопровождению сделок приватизации предприятий</span>
+          <li>
+            <a class="card card--align--left card--link" href="{{ links.servicesTaxes1 }}">
+              <span class="card__name">Приватизация</span>
+              <span class="card__descr">Оказание услуг по сопровождению сделок приватизации предприятий</span>
+            </a>
           </li>
         </ul>
       </div>

@@ -1,0 +1,123 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Бухгалтерский учет', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Ведение бухгалтерского учета и подготовка налоговой отчетности сторонней специализированной организацией (аутсорсинг) позволит Вам с меньшими затратами получить услуги более высокого качества, чем это можно ожидать от штатного бухгалтера, учитывая величину возможного вознаграждения. Для решения конкретных текущих задач и вопросов привлекаются грамотные аудиторы и юристы, что гораздо эффективнее и дешевле в рамках договора на обслуживание, чем разовые обращения к данным специалистам разных организаций.
+        </p>
+
+        <p class="paragraph page-services__paragraph">
+          В соответствии с п. 2 ст. 6 Федерального закона от 21.11.96 №129-ФЗ "О бухгалтерском учете" руководитель организации может передать на договорных началах ведение бухгалтерского учета специализированной организации.
+        </p>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin paragraph--bold">
+          Что включает в себя ведение бухгалтерского и налогового учета?
+        </p>
+        <p class="paragraph page-services__paragraph">
+          Согласно требованиям законодательства каждый хозяйствующий субъект обязан вести налоговый и бухгалтерский учет и своевременно предоставлять отчетность в контролирующие органы.
+        </p>
+
+        <p class="paragraph page-services__paragraph--no-margin">Ведение бухгалтерского учета на предприятии включает в себя:</p>
+        <ul class="paragraph  page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Учет информации в денежном выражении об имуществе, обязательствах организации и их движении на основании первичных документов.</li>
+          <li class="list__marker">Систематизация первичных документов.</li>
+          <li class="list__marker">Составление сводных регистров бухгалтерского учета.</li>
+          <li class="list__marker">Учет труда, расчет заработной платы.</li>
+          <li class="list__marker">Составление финансовой отчетности для налоговой инспекции (бухгалтерский баланс, отчет о прибылях и убытках, отчет о движении денежных средств, отчет о движении капитала, расшифровки отдельных статей бухгалтерского баланса).</li>
+          <li class="list__marker">На основе данных бухгалтерского учета составление отчетов во внебюджетные фонды (пенсионный фонд, фонд социального страхования).</li>
+          <li class="list__marker">Формирование учетной политики организации для целей бухгалтерского учета.</li>
+          <li class="list__marker">Представление отчетности в ИМНС, внебюджетные фонды, органы статистического учета.</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph--no-margin">Ведение налогового учета на предприятии включает в себя:</p>
+        <ul class="paragraph  page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Систематизацию первичных учетных документов.</li>
+          <li class="list__marker">Формирование учетной политики организации для целей налогового учета.</li>
+          <li class="list__marker">Составление аналитических регистров налогового учета.</li>
+          <li class="list__marker">Расчет налоговой базы по налогам, предусмотренным законодательством (НДС, налог на прибыль, единый социальный налог, налог на имущество и другие).</li>
+          <li class="list__marker">Составление налоговых деклараций (по налогу на прибыль, НДС, по налогу на имущество, по единому социальному налогу).</li>
+          <li class="list__marker">Формирование проводок по начислению налогов.</li>
+          <li class="list__marker">Представление отчетности в ИМНС.</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph paragraph--bold page-services__paragraph--no-margin">Бухгалтерское обслуживание: заключение договора, взаимодействие сторон, порядок работы</p>
+        <p class="paragraph page-services__paragraph--no-margin">Обычно работа по оказанию услуг в области ведения бухгалтерского учета начинается с того, что наши специалисты оценивают объем требуемых от нас работ, и определяют стоимость бухгалтерского обслуживания. Если клиента устраивают все условия, то после этого заключается договор на интересующий вид бухгалтерских услуг.</p>
+        <p class="paragraph page-services__paragraph--no-margin">Затем проводятся подготовительные работы для определения состояния бухгалтерского учета и наличия бухгалтерской документации:</p>
+        <ul class="paragraph  page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Определение состояния бухгалтерского учета и наличия бухгалтерской документации.</li>
+          <li class="list__marker">Определение входящих остатков по всем регистрам бухгалтерского учета.</li>
+          <li class="list__marker">Подготовка информационной базы для использования в программе автоматизации учета.</li>
+          <li class="list__marker">Ознакомление с предлагаемой к обслуживанию финансовой схемой работы Клиента.</li>
+          <li class="list__marker">Обсуждение и разработка финансовой технологической схемы работ.</li>
+          <li class="list__marker">Передача дел.</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Все подготовительные работы по изучению бухгалтерского учета на предприятии проводятся бесплатно и являются вкладом в развитие сотрудничества. Если после проведения подготовительных работ выяснится, что на предприятии невозможно поставить бухгалтерский учет, так как отсутствует или запущен учет, не хватает документов и т.п., то работы по восстановлению бухгалтерского учета проводятся по отдельному соглашению.
+        </p>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Дальнейшая работа выглядит следующим образом:
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          С обеих сторон назначаются ответственные лица, которые будут общаться друг с другом в рамках договора.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Определяется порядок документооборота, т.е. какие документы когда, кому и кем передаются.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Клиент не реже одного раза в месяц передает документы для обработки, а наша Компания - документы на подпись.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          По окончании отчетного периода Клиенту представляется вся бухгалтерская и налоговая отчетность с отметками соответствующих органов.
+        </p>
+
+        <p class="paragraph page-services__paragraph--no-margin">Затем проводятся подготовительные работы для определения состояния бухгалтерского учета и наличия бухгалтерской документации:</p>
+        <ul class="paragraph  page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Строгое соответствие в своей деятельности требованиям действующего законодательства Российской Федерации.</li>
+          <li class="list__marker">Приоритетное соблюдение интересов своих клиентов.</li>
+          <li class="list__marker">Конфиденциальность сведений о клиенте и его проблемах, соблюдение коммерческой тайны.</li>
+          <li class="list__marker">Дифференцированный подход к оплате услуг с учетом сложности выполняемой работы.</li>
+          <li class="list__marker">Расширение перечня оказываемых клиентам услуг.</li>
+          <li class="list__marker">Развитие и совершенствование форм и методов работы.</li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

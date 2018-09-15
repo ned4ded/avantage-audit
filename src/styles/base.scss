@@ -67,6 +67,60 @@ body {
   color: $semi-color-brown;
   line-height: 1.67;
   @include make-ff-nova(18px);
+
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 19px;
+
+  &--style--number {
+    list-style: decimal;
+  }
+
+  &--no-padding {
+    padding-left: 0;
+  }
+
+  & li {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &--sublist li {
+    margin-bottom: 5px;
+  }
+
+  &__line {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+  &__marker {
+    padding-left: 15px;
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 15px;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 2px;
+      border-radius: 0;
+      background-color: $semi-color-brown;
+    }
+  }
 }
 
 /* End of A base styles */

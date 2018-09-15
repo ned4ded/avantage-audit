@@ -1,6 +1,9 @@
 {
   "main" : "index.html",
   "services" : "services.html",
+  "servicesTaxes1": "services-taxes-1.html",
+  "servicesTaxes2": "services-taxes-2.html",
+  "servicesTaxes3": "services-taxes-3.html",
   "clients" : "clients.html",
   "about" : "about.html",
   "directorate" : "directorate.html"
