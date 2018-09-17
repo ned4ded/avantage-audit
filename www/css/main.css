@@ -133,6 +133,31 @@ body {
       border-radius: 0;
       background-color: #232323; }
 
+.reference {
+  display: inline-block;
+  position: relative; }
+  .reference__container {
+    position: absolute;
+    left: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: -8px;
+    left: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap; }
+  .reference__link {
+    text-decoration: underline;
+    color: #232323;
+    font-size: 11px;
+    padding-left: 3px;
+    padding-right: 3px; }
+    .reference__link:hover {
+      color: #d98d02; }
+
 /* End of A base styles */
 .contact {
   display: -webkit-inline-box;

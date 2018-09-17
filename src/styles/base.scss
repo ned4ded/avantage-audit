@@ -164,6 +164,33 @@ body {
   }
 }
 
+.reference {
+  display: inline-block;
+  position: relative;
+
+  &__container {
+    position: absolute;
+    left: 100%;
+    display: flex;
+    position: absolute;
+    top: -8px;
+    left: 100%;
+    flex-flow: row nowrap;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: rgb(35, 35, 35);
+    font-size: 11px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+    &:hover {
+      color: darken($main-color-contrast, 30%)
+    }
+  }
+}
+
 /* End of A base styles */
 
 @import './blocks/base.scss';
