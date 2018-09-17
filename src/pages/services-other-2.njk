@@ -1,0 +1,119 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Обучение МСФО', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Мы приглашаем Вас пройти подготовку к сдаче экзамена АССА для получения диплома по международной финансовой отчетности (DipIFR-рус), который признается на международном уровне и засчитывается при прохождении полного курса на получение профессионального сертификата АССА на английском языке.
+        </p>
+
+        <p class="paragraph paragraph--bold page-services__paragraph page-services__paragraph--no-margin">
+          Организация обучения
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Программа обучения включает семинары, проводимые лектором-консультантом, а также самостоятельную подготовку при нашем руководстве. Общая продолжительность курса составляет 120 академических часов (в т.ч. аудиторные занятия - 63 часа).
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          В результате обучения по нашей программе, слушатели приобретут профессиональные теоретические знания и практические навыки в применении международных стандартов финансовой отчётности, подготовки финансовой отчётности компаний и групп компаний. Максимальное количество слушателей - 15 человек.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Помимо аудиторного обучения мы обеспечим Вас поддержкой наших специалистов. По электронной почте вы можете получить ответы на интересующие Вас вопросы из области МСФО.
+        </p>
+
+        <p class="paragraph paragraph--bold page-services__paragraph page-services__paragraph--no-margin">
+          Наши преимущества
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Нами разработаны уникальные схемы решения экзаменационных задач.
+        </p>
+        <p class="list__heading paragraph page-services__paragraph page-services__paragraph--no-margin">
+          После занятий с использованием наших схем время решения задач на экзамене составит:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Консолидация - 25 мин.;</li>
+          <li class="list__marker">Комплексная задача - 40 мин.;</li>
+          <li class="list__marker">Отчет о движении денежных средств - 25 мин.;</li>
+          <li class="list__marker">Задачи по другим темам - от 15 до 25 мин.</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Стоимость участия в семинаре одного слушателя составляет 47 200 рублей в т.ч. НДС.
+        </p>
+        <p class="list__heading paragraph page-services__paragraph page-services__paragraph--no-margin">
+          В стоимость включено:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Комплект учебных материалов АТС International;</li>
+          <li class="list__marker">Лекции и практические занятия;</li>
+          <li class="list__marker">Регистрация слушателя для сдачи экзамена в АТС;</li>
+          <li class="list__marker">Кофе-брейки.</li>
+        </ul>
+
+        <p class="list__heading paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Комплект учебных материалов включает:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Сводный курс лекций - Study System;</li>
+          <li class="list__marker">Сборник вопросов (задачник) - Revision Question Bank;</li>
+          <li class="list__marker">Практическое пособие (задачник) - Revision Question Bank;</li>
+          <li class="list__marker">Пробный экзамен - Mock Exam.</li>
+        </ul>
+
+        <p class="list__heading paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Требования к слушателям:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Наличие действительного квалификационного аттестата аудитора или профессионального бухгалтера, или</li>
+          <li class="list__marker">Наличие диплома о высшем образовании по специальности "бухучет"/"аудит" и стажа работы не менее 2-х лет в области бухучета и аудита, или</li>
+          <li class="list__marker">Наличие стажа работы не менее 3-х лет в области бухучета и аудита.</li>
+          <li class="list__marker">Пробный экзамен - Mock Exam.</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Занятия проводятся в офисе ООО "Авантаж Аудит" по адресу: г. Москва, ул. Мишина, д.56, к.2, этаж 2.
+        </p>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Мы примем Ваши заявки по следующим телефонам:
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          (495) 787-64-29 (30,31)
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

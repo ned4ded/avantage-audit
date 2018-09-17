@@ -42,6 +42,15 @@ body {
   .btn:hover {
     background-color: #fed385;
     color: #101541; }
+  .btn--no-shadow {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn--grey {
+    color: #474963;
+    background-color: #ededed; }
+    .btn--grey:hover {
+      background-color: #e0e0e0;
+      color: #474963; }
 
 .heading {
   margin: 0;
@@ -77,6 +86,14 @@ body {
   font-style: normal; }
   .paragraph--bold {
     font-weight: 600; }
+  .paragraph--maw--900 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto; }
+  .paragraph--align--center {
+    text-align: center; }
+  .paragraph--align--right {
+    text-align: right; }
 
 .list {
   margin: 0;
@@ -92,6 +109,10 @@ body {
     margin-bottom: 10px; }
   .list--sublist li {
     margin-bottom: 5px; }
+  .list--spread > li {
+    margin-bottom: 40px; }
+  .list--no-margin li {
+    margin-bottom: 0; }
   .list__line {
     display: block;
     margin-bottom: 10px; }
@@ -366,6 +387,7 @@ body {
   width: 350px;
   min-height: 140px;
   padding: 25px 20px;
+  color: #252c30;
   background-color: #f6f6f6; }
   .card--link {
     height: 100%;
@@ -647,7 +669,10 @@ body {
       font-size: 14px;
       font-weight: 400;
       font-style: normal;
-      color: white; }
+      color: white;
+      text-decoration: none; }
+      .footer__nav-text:hover {
+        text-decoration: underline; }
     .footer__nav-heading {
       display: inline-block;
       margin-bottom: 25px;
@@ -829,6 +854,10 @@ body {
     margin-bottom: 0; }
   .page-services__paragraph--margin--md {
     margin-bottom: 40px; }
+  .page-services__paragraph--margin--xs {
+    margin-bottom: 20px; }
+  .page-services__paragraph--margin--sm {
+    margin-bottom: 30px; }
   .page-services__paragraph--other {
     max-width: 865px; }
 
@@ -958,6 +987,10 @@ body {
   color: #d98d02; }
   .page-services__link:hover {
     color: rgba(217, 141, 2, 0.7); }
+  .page-services__link--grey {
+    color: #232323; }
+    .page-services__link--grey:hover {
+      color: #d98d02; }
 
 .page-directorate__heads {
   padding-top: 68px;

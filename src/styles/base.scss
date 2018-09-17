@@ -32,6 +32,20 @@ body {
     background-color: lighten($main-color-contrast, 3%);
     color: #101541;
   }
+
+  &--no-shadow {
+    box-shadow: none;
+  }
+
+  &--grey {
+    color: #474963;
+    background-color: #ededed;
+
+    &:hover {
+      background-color: darken(#ededed, 5%);
+      color: #474963;
+    }
+  }
 }
 
 .heading {
@@ -71,6 +85,24 @@ body {
   &--bold {
     font-weight: 600;
   }
+
+  &--maw {
+    &--900 {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--align {
+    &--center {
+      text-align: center;
+    }
+
+    &--right {
+      text-align: right;
+    }
+  }
 }
 
 .list {
@@ -87,6 +119,7 @@ body {
     padding-left: 0;
   }
 
+
   & li {
     position: relative;
     margin-bottom: 10px;
@@ -94,6 +127,14 @@ body {
 
   &--sublist li {
     margin-bottom: 5px;
+  }
+
+  &--spread > li {
+    margin-bottom: 40px;
+  }
+
+  &--no-margin li {
+    margin-bottom: 0;
   }
 
   &__line {

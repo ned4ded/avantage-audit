@@ -18,8 +18,16 @@
       margin-bottom: 0;
     }
 
-    &--margin--md {
-      margin-bottom: 40px;
+    &--margin {
+      &--md {
+        margin-bottom: 40px;
+      }
+      &--xs {
+        margin-bottom: 20px;
+      }
+      &--sm {
+        margin-bottom: 30px;
+      }
     }
 
     &--other {
@@ -197,6 +205,14 @@
 
     &:hover {
       color: rgba(darken($main-color-contrast, 30%), .7);
+    }
+
+    &--grey {
+      color: rgb(35, 35, 35);
+
+      &:hover {
+        color: darken($main-color-contrast, 30%);
+      }
     }
   }
 }

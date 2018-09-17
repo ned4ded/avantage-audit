@@ -1,0 +1,61 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Абонентское обслуживание  предприятий ЖКХ', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          ООО «Авантаж Аудит» предлагает предприятиям оказывающим услуги в сфере ЖКХ АБОНЕНТСКОЕ ОБСЛУЖИВАНИЕ .
+        </p>
+
+        <p class="list__heading paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Организациям, заключившим договор, предоставляется устное консультирование по телефону по вопросам следующей тематики:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">юридические консультации в ЖКХ</li>
+          <li class="list__marker">формирование тарифов в ЖКХ</li>
+          <li class="list__marker">разработка программ энергосбережения</li>
+          <li class="list__marker">разработка инвестиционных программ</li>
+          <li class="list__marker">бухгалтерский учет и налогообложение в ЖКХ</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--no--margin">
+          Количество вопросов не ограничивается.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

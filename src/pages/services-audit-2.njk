@@ -1,0 +1,71 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Оценка', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--xs">
+          Компания "Авантаж Аудит" расширяет сферу деятельности, в связи с чем рада сообщить о готовности оказывать следующие виды услуг:
+        </p>
+
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list list--no-margin">
+          <li class="list__marker">оценка недвижимости,</li>
+          <li class="list__marker">оценка машин и оборудования,</li>
+          <li class="list__marker">оценка незавершенного строительства,</li>
+          <li class="list__marker">оценка ценных бумаг,</li>
+          <li class="list__marker">оценка бизнеса,</li>
+          <li class="list__marker">оценка нематериальных активов.</li>
+        </ul>
+
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--no-margin">
+          Надеемся, что наше деловое партнерство поможет в процветании Вашего бизнеса.
+        </p>
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--margin--md">
+          С расценками по оценочной деятельности вы можете ознакомиться просмотрев наш прайс лист.
+        </p>
+
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--margin--md">
+          <a href="http://www.avantage-audit.ru/ocenochnii%20terif.doc" class="btn btn--no-shadow">Прайс лист</a>
+        </p>
+
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--margin--md">
+          Свяжитесь с нами, и мы будем рады обсудить любые варианты сотрудничества.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

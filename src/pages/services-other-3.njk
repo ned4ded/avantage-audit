@@ -1,0 +1,75 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Повышение квалификации профессиональных бухгалтеров', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Вашему вниманию предлагаются следующие образовательные программы повышения квалификации Института профессиональных бухгалтеров и аудиторов России (ИПБР)
+        </p>
+
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Налог на добавленную стоимость. Новое в порядке исчисления и уплаты (10 ч.)</li>
+          <li class="list__marker">Правовое регулирование предпринимательской деятельности (40 ч.)</li>
+          <li class="list__marker">Международные стандарты финансовой отчетности (40 ч.)</li>
+          <li class="list__marker">Учет расчетов налога на прибыль в соответствии с ПБУ 18/02 (20 ч.)</li>
+          <li class="list__marker">Порядок продления квалификационного аттестата профессионального бухгалтера члена ИПБ МР в 2009 году</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          По окончании обучения выдается именной сертификат ИПБР.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Все слушатели обеспечиваются учебно-методическими материалами.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Обучение проводиться преподавателями, имеющими аттестат преподавателя ИПБ России и (или) аттестат профессионального бухгалтера ИПБ России.
+        </p>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Обучение проводиться преподавателями, имеющими аттестат преподавателя ИПБ России и (или) аттестат профессионального бухгалтера ИПБ России.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Для записи на обучение Вы можете позвонить по телефонам: 787-64-29; 787-64-30; 797-64-31; 781-82-65
+        </p>
+
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--margin--md">
+          <a href="http://www.avantage-audit.ru/imgs/sertavant.jpg" class="btn btn--grey btn--no-shadow">Свидетельство об аккредитации ООО «Авантаж» в ИПБ России</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

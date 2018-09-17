@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <div class="container-fluid page-clients__roster">
+  <div id="industries" class="container-fluid page-clients__roster">
     {% set columnOneClients = datasets.get("clients")["column-one"] %}
     {% set columnTwoClients = datasets.get("clients")["column-two"] %}
 
@@ -82,7 +82,7 @@
     </div>
   </div>
 
-  <div class="container page-clients__gratitude">
+  <div id="gratitude" class="container page-clients__gratitude">
     {% set gratitude = datasets.get("clients")["gratitude"] %}
 
     <div class="row">

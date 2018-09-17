@@ -1,0 +1,219 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Аудит', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Аудиторская фирма  "Авантаж Аудит"  проводит обязательные и инициативные аудиторские проверки в рамках общего аудита с выдачей аудиторского заключения.
+        </p>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          В ходе проверки  наши  специалисты  определят  полноту  и  достоверность  бухгалтерского  учёта и  финансовой отчётности предприятия, их  соответствие требованиям нормативных документов, выработают рекомендации  по  совершенствованию бухгалтерской практики, проведут консультации по вопросам учёта и управления финансами.
+        </p>
+
+        <p class="list__heading paragraph page-services__paragraph page-services__paragraph--no-margin">
+          В основе качества наших услуг лежат:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">высокий профессионализм сотрудников компании и стандарты работы, обеспечивающие полную конфиденциальность взаимодействий с клиентом;</li>
+          <li class="list__marker">приоритетность интересов клиента;</li>
+          <li class="list__marker">ориентация на серьезное, долгосрочное сотрудничество в форме аудиторского сопровождения для своевременного предупреждения возможных проблем предприятия;</li>
+        </ul>
+
+        <div class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          <p class="paragraph paragraph--bold page-services__paragraph page-services__paragraph--margin--xs">
+            Компания "Авантаж Аудит" оказывает следующие виды услуг в области аудита:
+          </p>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Обязательный аудит</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Инициативный аудит</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Инновационный аудит</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Аудит бирж и внебюджетных фондов</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Аудиторское сопровождение</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Налоговый аудит и консалтинг</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Муниципальный консалтинг</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Услуги в области управления финансами</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+
+          <div data-accordion="collapse" class="page-services__accordion">
+            <div data-accordion-heading>
+              <p  class="page-services__accordion-heading">Организационное консультирование</p>
+            </div>
+
+            <div data-accordion-content class="page-services__accordion-content">
+
+            </div>
+          </div>
+        </div>
+
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--no-margin">
+          В любое удобное для Вас время Вы можете ознакомиться с нашим типовым <a class="page-services__link page-services__link--grey" href="http://www.avantage-audit.ru/DOGOV.doc">Договором</a> на оказание аудиторских услуг.
+        </p>
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--margin--xs">
+          Для того, чтобы оценить стоимость аудита, нужно заполнить <a class="page-services__link page-services__link--grey" href="http://www.avantage-audit.ru/ozentab.doc">оценочную таблицу</a> и отправить её нам по факсу или e-mail.
+        </p>
+        <p class="paragraph paragraph--align--right page-services__paragraph page-services__paragraph--margin--md">
+          <a href="http://www.avantage-audit.ru/ozentab.doc" class="btn btn--grey btn--no-shadow">Оценочная таблица</a>
+          <a href="http://www.avantage-audit.ru/DOGOV.doc" class="btn btn--no-shadow">Договор</a>
+        </p>
+
+        <p class="paragraph paragraph--bold page-services__paragraph page-services__paragraph--margin--xs">
+          Условия предоставления аудиторско-консультационных услуг
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Как показала практика, наиболее удобны для клиентов  договора на комплексное обслуживание, то есть проверка бухгалтерской документации и финансовой отчетности клиента поквартально в течение всего финансового года, регулярное (по мере необходимости) предоставление консультаций по налогообложению, финансам и управлению, информационная поддержка. В этом случае наша компания с высокой степенью вероятности может дать положительное аудиторское заключение по итогам года, поскольку все возможные замечания аудиторов и разногласия с клиентом разрешаются по взаимному удовлетворению в течение финансового года в рабочем порядке, а клиент имеет возможность строить свою финансовую стратегию с учетом рекомендаций наших экспертов и консультантов.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Наша компания гарантирует конфиденциальность информации о существе аудиторских проверок и других работах у клиента.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Стоимость наших услуг определяется исходя из объема работы наших специалистов (в человеко-часах или человеко-днях), необходимого для выдачи заключения или выполнения иной работы.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          С целью более точного определения объема предстоящих работ перед заключением договора производится  направление к клиенту эксперта для предварительного ознакомления с его бухгалтерской и финансовой документацией, спецификой и масштабом его деятельности. Оценка предполагаемой стоимости и объемов работ осуществляется бесплатно.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Обращаем Ваше внимание на то, что ООО "Авантаж Аудит" несет материальную ответственность за результаты аудиторских проверок в соответствии с действующим законодательством в размере реального ущерба, если данные убытки явились прямым следствием недостоверности выданного нами аудиторского заключения.
+        </p>
+
+        <p class="paragraph paragraph--bold page-services__paragraph page-services__paragraph--margin--xs">
+          Критерии проведения обязательного аудита
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          Ваше предприятие растет и развивается. Даже если в  прошлом году оно не подлежало обязательному аудиту, возможно, что в текущем году аудит станет для вас обязательным.
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Советом Федерации и Государственной думой РФ принят новый Федеральный закон  от 30.12.2008 № 307-ФЗ "Об аудиторской деятельности", где частью 1 статьи 5 закона установлено:
+        </p>
+        <p class="paragraph page-services__paragraph page-services__paragraph--no-margin">
+          Обязательный аудит проводится в случаях:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list list--style--number">
+          <li>если организация имеет организационно-правовую форму открытого акционерного общества;</li>
+          <li>если ценные бумаги организации допущены к обращению на торгах фондовых бирж и (или) иных организаторов торговли на рынке ценных бумаг;</li>
+          <li>если организация является кредитной организацией, бюро кредитных историй, организацией, являющейся профессиональным участником рынка ценных бумаг, страховой организацией, клиринговой организацией, обществом взаимного страхования, товарной, валютной или фондовой биржей, негосударственным пенсионным или иным фондом, акционерным инвестиционным фондом, управляющей компанией акционерного инвестиционного фонда, паевого инвестиционного фонда или негосударственного пенсионного фонда (за исключением государственных внебюджетных фондов);</li>
+          <li>если объем выручки от продажи продукции (продажи товаров, выполнения работ, оказания услуг) организации (за исключением органов государственной власти, органов местного самоуправления, государственных и муниципальных учреждений, государственных и муниципальных унитарных предприятий, сельскохозяйственных кооперативов, союзов этих кооперативов) за предшествовавший отчетному год превышает 400 миллионов рублей или сумма активов бухгалтерского баланса по состоянию на конец предшествовавшего отчетному года превышает 60 миллионов рублей;</li>
+          <li>если организация (за исключением органа государственной власти, органа местного самоуправления, государственного внебюджетного фонда, а также государственного и муниципального учреждения) представляет и (или) публикует сводную (консолидированную) бухгалтерскую (финансовую) отчетность;</li>
+          <li>в иных случаях, установленных федеральными законами.</li>
+        </ul>
+
+        <p class="paragraph page-services__paragraph page-services__paragraph--margin--md">
+          ООО "Авантаж Аудит"включен в реестр аудиторских организаций СРО "Российский Союз аудиторов" за основным регистрационным номером (ОРНЗ) 11603092904.
+        </p>
+
+        <p class="paragraph paragraph--align--center page-services__paragraph page-services__paragraph--margin--md paragraph--maw--900">
+          Если Вас заинтересовали наши предложения и условия Вы можете заполнить <a class="page-services__link page-services__link--grey" href="http://www.avantage-audit.ru/ozentab.doc">оценочную таблицу</a> и отправить нам по E-mail или по факсу. После этого наш специалист обязательно свяжется с Вами и постарается решить проблемы стоящие перед Вами и вашей организацией.
+        </p>
+        <p class="paragraph paragraph--align--right page-services__paragraph page-services__paragraph--margin--md">
+          <a href="http://www.avantage-audit.ru/ozentab.doc" class="btn btn--grey btn--no-shadow">Оценочная таблица</a>
+          <a href="http://www.avantage-audit.ru/DOGOV.doc" class="btn btn--no-shadow">Договор</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

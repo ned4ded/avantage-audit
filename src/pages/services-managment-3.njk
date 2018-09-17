@@ -1,0 +1,54 @@
+{% import "partials/nav.njk" as nav %}
+{% import "partials/heading.njk" as heading %}
+{% import "partials/service-card.njk" as serviceCard %}
+
+{% extends "layout.njk" %}
+
+{% block nav %}
+  {% set links = datasets.get('links') %}
+
+  {{ nav.make(links, 'services') }}
+{% endblock %}
+
+{% block content %}
+  {% set paths = datasets.get('paths') %}
+
+  <div class="container-fluid jumbotron jumbotron--services">
+    <div class="row">
+      <div class="col-12">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 jumbotron__block">
+              <h1 class="jumbotron__heading">Услуги</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row page-services__block">
+      <div class="col-12">
+        {{heading.make(false, 'Услуги кадрового консалтинга', 'page-services__heading')}}
+      </div>
+
+      <div class="col-12">
+        <p class="list__heading paragraph page-services__paragraph page-services__paragraph--no-margin">
+          ООО «Авантаж Аудит» предлагает клиентам услуги кадрового консалтинга, которые включают в себя:
+        </p>
+        <ul class="paragraph page-services__paragraph page-services__paragraph--margin--md list">
+          <li class="list__marker">Консультации по применению трудового законодательства РФ;</li>
+          <li class="list__marker">Анализ соответствия кадрового делопроизводства трудовому законодательству с целью снижения рисков применения штрафных санкций со стороны контролирующих органов;</li>
+          <li class="list__marker">Помощь в восстановлении кадрового делопроизводства;</li>
+          <li class="list__marker">Создание документов, касающихся работы с персоналом;</li>
+          <li class="list__marker">Помощь в подготовке локальных нормативных актов;</li>
+          <li class="list__marker">Консультации в случае конфликтных ситуаций в трудовых правоотношениях.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}
