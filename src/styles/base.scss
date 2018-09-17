@@ -180,13 +180,13 @@ body {
 
   &__link {
     text-decoration: underline;
-    color: rgb(35, 35, 35);
+    color: darken($main-color-contrast, 30%);
     font-size: 11px;
     padding-left: 3px;
     padding-right: 3px;
 
     &:hover {
-      color: darken($main-color-contrast, 30%)
+      color: rgba(darken($main-color-contrast, 30%), .7);
     }
   }
 }

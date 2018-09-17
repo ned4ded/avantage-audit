@@ -151,12 +151,12 @@ body {
             flex-flow: row nowrap; }
   .reference__link {
     text-decoration: underline;
-    color: #232323;
+    color: #d98d02;
     font-size: 11px;
     padding-left: 3px;
     padding-right: 3px; }
     .reference__link:hover {
-      color: #d98d02; }
+      color: rgba(217, 141, 2, 0.7); }
 
 /* End of A base styles */
 .contact {
@@ -796,7 +796,8 @@ body {
               flex-flow: row wrap;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; }
+              justify-content: space-between;
+      list-style: none; }
       .page-clients__gratitude-list li:nth-child(n + 4) {
         margin-top: 20px; }
   .page-clients__paragraph {
